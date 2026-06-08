@@ -8,13 +8,10 @@ Bem-vindo ao **Onion Portable**. Esta é uma versão super enxuta da metodologia
 
 A pasta `onion-portable` contém:
 - **`ONION-MASTER-PROMPT.md`**: O "Cérebro". É a instrução que você deve dar à IA para que ela assuma as personas do Onion.
-- **`docs/`**: A pasta com os 6 arquivos de contexto que guiam a IA e guardam as informações do seu projeto:
+- **`docs/`**: A pasta com os 3 arquivos de contexto/ciclo que guiam a IA e guardam as informações do seu projeto:
   1. `business-context-lite.md` — Contexto de Negócio (o que construir)
   2. `technical-context-lite.md` — Contexto Técnico (como construir)
-  3. `product-cycle.md` — Regras do Ciclo de Produto
-  4. `engineer-cycle.md` — Regras do Ciclo de Engenharia
-  5. `knowledge-base-cycle.md` — Regras de criação de KBs
-  6. `sync-cycle.md` — Regras de Engenharia Reversa e Sincronismo
+  3. `onion-cycles.md` — Etapas e regras de todos os Ciclos de Desenvolvimento (Produto, Engenharia, KB e Sync) consolidadas em arquivo único para respeitar os limites de arquivos de contas gratuitas de IA.
 - **`docs/knowledge-base/`**: Pasta para armazenar Knowledge Bases temáticas criadas pelo `@meta`.
 
 ---
@@ -27,23 +24,23 @@ Neste cenário, a IA guiará as fases de Produto e Engenharia através de respos
 *   **Claude.ai (Claude Projects) [Recomendado para Web]**:
     1. Crie um novo **Project** (disponível no plano Pro/Team).
     2. Adicione o conteúdo de [`ONION-MASTER-PROMPT.md`](./ONION-MASTER-PROMPT.md) nas *Custom Instructions* do Projeto.
-    3. Faça o upload dos 6 arquivos da pasta `docs/` nos *Project Files* (Knowledge).
+    3. Faça o upload dos 3 arquivos da pasta `docs/` nos *Project Files* (Knowledge).
     4. *Fluxo:* Sempre que o Claude atualizar uma especificação, copie a resposta dele e atualize os arquivos correspondentes na sua máquina.
 *   **ChatGPT (Custom GPTs ou ChatGPT Projects)**:
     *   **Opção A: Custom GPTs (Geral/Persistente)**:
         1. Crie um **Custom GPT** (acessando *Explore GPTs* -> *Create*).
         2. Cole o conteúdo de [`ONION-MASTER-PROMPT.md`](./ONION-MASTER-PROMPT.md) no campo de *Instructions*.
-        3. Na área de *Knowledge*, faça o upload dos 6 arquivos da pasta `docs/` para servirem de referência de regras e templates.
+        3. Na área de *Knowledge*, faça o upload dos 3 arquivos da pasta `docs/` para servirem de referência de regras e templates.
         4. Certifique-se de habilitar o "Code Interpreter" nas configurações para melhor raciocínio e escrita lógica.
     *   **Opção B: ChatGPT Projects (Ideal para Repositórios/Times)**:
         1. Crie um **Project** (disponível para contas Team/Enterprise).
         2. Nas *Custom Instructions* do projeto, insira o conteúdo do [`ONION-MASTER-PROMPT.md`](./ONION-MASTER-PROMPT.md).
-        3. Faça o upload dos 6 arquivos da pasta `docs/` e de qualquer outro código relevante do repositório em *Files* do projeto.
+        3. Faça o upload dos 3 arquivos da pasta `docs/` e de qualquer outro código relevante do repositório em *Files* do projeto.
         4. O histórico de conversas e os arquivos compartilhados no projeto manterão o alinhamento de forma simplificada.
 *   **Gemini (Advanced / Gems)**:
     1. Crie uma **Gem** personalizada.
     2. Cole o conteúdo de [`ONION-MASTER-PROMPT.md`](./ONION-MASTER-PROMPT.md) nas instruções da Gem.
-    3. Anexe os 6 arquivos de contexto `docs/` na conversa inicial para dar o ponto de partida do seu projeto.
+    3. Anexe os 3 arquivos de contexto `docs/` na conversa inicial para dar o ponto de partida do seu projeto.
 
 ---
 
