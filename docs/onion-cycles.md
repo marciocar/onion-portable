@@ -94,3 +94,37 @@
 
 ### Etapa 4: Validação
 1. Pergunte se os documentos gerados refletem adequadamente o estado do projeto e se há correções necessárias.
+
+---
+
+## 5. Session & Progress Cycle (@docs)
+*Objetivo: Registrar as decisões, alterações e estado de cada sessão de desenvolvimento em `docs/sessions/`.*
+
+### Etapa 1: Início e Gatilho (Trigger)
+1. Ativado ao término de cada sessão de desenvolvimento ou mediante comando direto do usuário: `/session "nome-do-topico"` ou `/sync-sessions "nome-do-topico"`.
+2. Se o usuário não fornecer o nome do tópico, pergunte ou infira com base no trabalho realizado.
+
+### Etapa 2: Coleta de Métricas (Analyze)
+1. **Identificar arquivos modificados:** Liste todos os arquivos criados ou modificados na sessão atual (usando git status ou comparação de arquivos).
+2. **Coletar decisões:** Recupere as principais decisões arquiteturais, de design ou de negócio tomadas na conversa.
+3. **Resumir progresso:** Descreva sucintamente o objetivo e o resultado final da sessão.
+
+### Etapa 3: Geração do Registro (Generate)
+1. Crie uma pasta sob o caminho: `docs/sessions/YYYY-MM-DD_HHMM_nome-do-topico/` (utilizando a data atual no fuso local).
+2. Gere os seguintes arquivos nessa pasta usando os templates definidos:
+   - **`README.md`**: Resumo executivo da sessão (objetivo, resultados, tempo e links).
+   - **`context.md`**: Contexto inicial (situação inicial, motivação, restrições e referências).
+   - **`decisions.md`**: Decisões arquiteturais/técnicas tomadas e suas justificativas.
+   - **`changes.md`**: Lista detalhada de arquivos criados/modificados com breves descrições e testes adicionados.
+   - **`notes.md`**: Notas, insights de desenvolvimento e próximos passos para o projeto.
+   - **`files-changed.txt`**: Lista bruta de arquivos criados e modificados nesta sessão (um por linha).
+   - **`commands-executed.txt`**: Lista dos comandos executados ou workflows chamados nesta sessão.
+3. **Cenário B (IDE Agêntica):** Crie os diretórios e escreva os arquivos diretamente.
+4. **Cenário A (Web Chat):** Gere todo o conteúdo em blocos markdown com cabeçalhos de arquivo claros (ou gere um arquivo zip/artefatos conforme o ambiente).
+
+
+### Etapa 4: Atualização do Índice (Index Sync)
+1. Atualize o arquivo central de índice: `docs/sessions/README.md`.
+2. Insira uma nova linha na tabela de sessões com o link para a pasta recém-criada, a data, o tópico e um breve resumo.
+3. Confirme a finalização e recomende os próximos passos.
+
